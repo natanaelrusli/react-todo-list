@@ -14,6 +14,10 @@
 
 .container {
   /* box-shadow: var(--box-shadow); */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
   width: 35%;
 }
 
@@ -24,15 +28,35 @@
   width: 100%;
   font-size: x-large;
   padding: 2%;
+
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out
 }
 
-input:focus {
+.input-todo:focus {
   outline: 0;
+  box-shadow: var(--box-shadow);
+  transition: ease-in-out;
+  border: 2px solid green;
+
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -ms-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-out
+  
 }
 
 .filter-container {
   /* display: flex; */
   color: lightgray;
+}
+
+.pointer {
+  margin-right: 10px;
 }
 
 .pointer:hover {
@@ -68,7 +92,12 @@ input:focus {
   margin-top: 1vh;
   margin-bottom: 1vh;
   background-color: white;
+  justify-content: space-between;
   box-shadow: var(--box-shadow);
+}
+
+.todo_left {
+  display: flex;
 }
 
 .todo:first-child {
@@ -83,8 +112,6 @@ input:focus {
 
 .action {
   display: flex;
-  width: 20%;
-  justify-content: space-between;
 }
 
 .anima {
@@ -99,4 +126,9 @@ input:focus {
 }
 .anima-line {
   text-decoration: line-through;
+}
+
+.delete-btn {
+  margin-left: 10px;
+  margin-right: 10px;
 }

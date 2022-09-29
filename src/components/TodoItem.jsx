@@ -4,7 +4,7 @@ export default class TodoItem extends Component {
   render() {
     return (
       <div className='todo'>
-          <div style={{ display: 'flex', marginRight: 'auto' }}>
+          <div className='todo_left'>
             <div className='pointer' onClick={() => this.props.onCheckClick(this.props.index)}>
               <span style={{ color: this.props.todo.done ? 'green' : 'red' }}>&#10004;</span>
             </div>
